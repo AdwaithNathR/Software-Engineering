@@ -1,5 +1,6 @@
 ﻿using Communication;
 using SE_ProtoType;
+using System.Diagnostics;
 
 // Program which drives everything
 
@@ -12,7 +13,14 @@ namespace Executive
         {
             // Using Factory
             CommunicationFactory factory = new CommunicationFactory();
-            ICommunication communication = factory.GetPersistenceManager();
+
+            Console.WriteLine("Choose Communication to use (Default TCP)" +
+                            " 1.Tcp" +
+                            " 2.Http" +
+                            " 3.EncodedTcp");
+            int choice = Convert.ToInt32(Console.ReadLine()); // Choice of Communication
+
+            ICommunication communication = factory.CreateCommunicator(choice);
             communication.Send("Hello", "123");
             communication.Receive("");
             Console.WriteLine("Send Count = " + communication.SendCount + "\n");

@@ -1,6 +1,8 @@
 ﻿
 // Send Message using HttpManager
 
+using System.Diagnostics;
+
 namespace SE_ProtoType
 {
     public class HttpManager : ICommunication
@@ -33,13 +35,13 @@ namespace SE_ProtoType
 
         public virtual void Send(string message, string address)
         {
-            Console.WriteLine("Message sending using Http...\n");
+            Debug.WriteLine("Message sending using Http...\n");
             SendCount++;
         }
 
         public virtual string Receive(string message)
         {
-            Console.WriteLine("Message Receiving using Http...\n");
+            Debug.WriteLine("Message Receiving using Http...\n");
             ReceiveCount++;
             return message;
         }

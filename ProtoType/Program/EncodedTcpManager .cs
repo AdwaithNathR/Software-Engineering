@@ -1,6 +1,8 @@
 ﻿
 // Send Encoded messages using TCP
 
+using System.Diagnostics;
+
 namespace SE_ProtoType
 {
     public class EncodedTcpManager : TcpManager
@@ -9,26 +11,26 @@ namespace SE_ProtoType
         public override void Send(string message, string address)
         {
             string encodedMessage = Encode(message);
-            Console.WriteLine("Sending Decoded Message");
+            Debug.WriteLine("Sending " + message);
             SendCount++;
         }
 
         public override string Receive(string message)
         {
             string decodedMessage = Decode(message);
-            Console.WriteLine("Recived Decoded Message");
+            Debug.WriteLine("Recived " + message);
             ReceiveCount++;
             return decodedMessage;
         }
 
         string Encode(string message)
         {
-            return "EncodedMessage";
+            return "EncodedMessage"; // will update soon
         }
 
         string Decode(string message)
         {
-            return "DecodedMessage";
+            return "DecodedMessage"; // will update soon
         }
     }
 }

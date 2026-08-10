@@ -1,4 +1,5 @@
 ﻿using SE_ProtoType;
+using System.Diagnostics;
 
 // Selects user preffered Communication Channel 
 
@@ -6,9 +7,8 @@ namespace Communication
 {
     public class CommunicationFactory
     {
-        public ICommunication GetPersistenceManager()
+        public ICommunication CreateCommunicator(int choice)
         {
-            int choice = GetCommunicationChoice();
 
             if (choice == 1)
                 return new TcpManager();
@@ -20,17 +20,7 @@ namespace Communication
                 return new EncodedTcpManager();
 
             else
-                return new TcpManager();
-        }
-
-        int GetCommunicationChoice()
-        {
-            Console.WriteLine("Choose Communication to use (Default TCP)" +
-                  "1.Tcp" +
-                  "2.Http" +
-                  "3.EncodedTcp");
-
-            return Convert.ToInt32(Console.ReadLine());
+                return new TcpManager(); // Defaulty return TcpManager object to avoid Exception
         }
     }
 }
