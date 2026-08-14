@@ -18,8 +18,10 @@ namespace Executive
                             " 1.Tcp" +
                             " 2.Http" +
                             " 3.EncodedTcp");
-            int choice = Convert.ToInt32(Console.ReadLine()); // Choice of Communication
-
+            if ( !(int.TryParse(Console.ReadLine(), out int choice)) ) // Choice of Communication
+            {
+                Console.WriteLine("Covertion failed\n");
+            }
             ICommunication communication = factory.CreateCommunicator(choice);
             communication.Send("Hello", "123");
             communication.Receive("");
