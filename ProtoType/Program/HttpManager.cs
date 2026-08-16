@@ -1,6 +1,7 @@
 ﻿
 // Send Message using HttpManager
 
+using Communication;
 using System.Diagnostics;
 
 namespace SE_ProtoType
@@ -33,6 +34,8 @@ namespace SE_ProtoType
             }
         }
 
+        string ICommunication.FilePath { get; }
+
         public virtual void Send(string message, string address)
         {
             Debug.WriteLine("Message sending using Http...\n");
@@ -44,6 +47,11 @@ namespace SE_ProtoType
             Debug.WriteLine("Message Receiving using Http...\n");
             ReceiveCount++;
             return message;
+        }
+
+        void  ICommunication.AddSubscriber(string id, ICommunicationListener subscriber)
+        {
+            Debug.WriteLine("");
         }
 
     }
