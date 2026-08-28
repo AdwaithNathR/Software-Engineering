@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParcelDeliveryCalculator", "ParcelDeliveryCalculator.csproj", "{76401433-DCDB-4E0C-B119-F18C49CDB793}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestParcelDeliveryCalculator", "..\UnitTestParcelDeliveryCalculator\UnitTestParcelDeliveryCalculator.csproj", "{11FD1AE8-7AC4-4F75-B999-523AA1A143F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76401433-DCDB-4E0C-B119-F18C49CDB793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76401433-DCDB-4E0C-B119-F18C49CDB793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76401433-DCDB-4E0C-B119-F18C49CDB793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76401433-DCDB-4E0C-B119-F18C49CDB793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11FD1AE8-7AC4-4F75-B999-523AA1A143F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11FD1AE8-7AC4-4F75-B999-523AA1A143F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11FD1AE8-7AC4-4F75-B999-523AA1A143F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11FD1AE8-7AC4-4F75-B999-523AA1A143F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2857DF16-154E-41AC-91D0-14DC2466EFEB}
+	EndGlobalSection
+EndGlobal
