@@ -98,6 +98,20 @@ public class DeliveryCalculatorTest
         Assert.AreEqual(costPerDay, -1);
     }
 
+    // Quote method returns -1 if there is any Exception
+    [TestMethod]
+    [Owner("Adwaith Nath")]
+    [Priority(1)]
+    public void TestForQuoteForNull()
+    {
+        SameDayDelivery sameDayDelivery = null;
+        decimal weight = 40;
+        decimal distance = 400;
+        decimal costPerDay = _deliveryCalculator.Quote(sameDayDelivery, weight, distance);
+
+        Assert.AreEqual(costPerDay, -1);
+    }
+
 }
 
 [TestClass]
