@@ -39,7 +39,7 @@ namespace MultiThreadingDemo
         private readonly Thread _listenThread;      // Thread that listens for messages on the port.
         private readonly Thread _summarizerThread;  // Thread that summarizes context from the list of messages.
         private AutoResetEvent _triggerSummarize;   // Event to notify that summarizer needs to be run.
-        private const int TriggerSummarizerMessageCount = 2; // Batch count of messages after which to run summarizer.
+        private const int TriggerSummarizerMessageCount = 17; // Batch count of messages after which to run summarizer.
 
         /// <summary>
         /// Creates an instance of the main window.
